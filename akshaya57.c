@@ -1,29 +1,26 @@
 #include<stdio.h>
 int main()
 {
-	int i, n, Max, Secondmax, a[n];
+	int t, num, Max, Secondmax;
 	printf("Enter the value\n");
-	scanf("%d", &n);
-	for(i=1; i<=n; i++)
+	scanf("%d", &t);
+	printf("Enter the first no\n");
+	scanf("%d", &Max);
+	while(t>1)
 	{
-		printf("Enter no\n");
-		scanf("%d", &a[i]);
-	}	
-	Max=a[1];
-	Secondmax=a[1];
-	for(i=1; i<=n; i++)
-	{
-		if(a[i]>Max)
+		printf("Enter another no");
+		scanf("%d", &num);
+		if(num>Max)
 		{
 			Secondmax=Max;
-			Max=a[i];
+			Max=num;
 		}
-		else if(a[i]>Secondmax)
+		if(num<Max&&num>Secondmax)
 		{
-			Secondmax=a[i];
+			Secondmax=num;
 		}
-	}
-	printf("Max=%d\n", Max);
-	printf("Secondmax=%d", Secondmax);
+		t-=1;
+	}	
+	printf("The maximum and second maximumare %d,%d", Max, Secondmax);
 	return 0;
 }
