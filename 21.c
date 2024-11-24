@@ -1,15 +1,26 @@
 #include<stdio.h>
-int main()
-{
-	int a,fact=1,i;
-	printf("Enter number : ");
-	scanf("%d",&a);
-	i=1;
-	while (i<=a)
-	{
-		fact=fact*i;
-		i+=1;
+int main(){
+	int a,b;
+	unsigned char c;
+
+	printf("Enter two numbers : ");
+	scanf("%d%d",&a,&b);
+	printf("Enter the operation to be used : ");
+	scanf("%c",&c);
+	int m;
+	switch(c)
+	{case '+' : m=a+b;
+			printf("%d+%d=%d",a,b,m);
+			break;
+	 case '_' : m=a-b;
+	 		printf("%d-%d=%d",a,b,m);
+	 		break;
+	 case '*' : m=a*b ;
+	        break;
+	        printf("%d*%d=%d",a,b,m);
+	 case '/' : m=a/b ;
+	        break;
+	        printf("%d/%d=%d",a,b,m);
+	default : printf("\nWrong operator");
 	}
-	printf("Factorial of %d = %d",a,fact);
-	return 0;
 }
