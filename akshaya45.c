@@ -2,10 +2,10 @@
 #include<stdlib.h>
 int main()
 {
-    int luckynum,randomnum, a;
+    int luckynum,randomnum, i;
     printf("welcome to the guessing game\nenter your lucky number\n");
     scanf("%d",&luckynum);
-    for(a=1;a<2;a++)
+    for(i=1;i<2;i++)
     {
         randomnum=rand();
         if(luckynum==randomnum)
