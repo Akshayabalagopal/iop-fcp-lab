@@ -9,6 +9,7 @@ int main()
         return 1; 
     }
     fprintf(fptr,"%s","This file is on append Mode");
+	printf("Text has been written to the file in append mode.\n");
     fclose(fptr);
     return 0;
 }
